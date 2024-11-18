@@ -1,5 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
 .todo-app {
     font-family: sans-serif;
+    background: #232229;
+    height: 100vh;
+    font-family: Jost;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        color: white;
+    }
 }
 
 /** add todo **/
@@ -10,13 +27,58 @@
 /** todo list **/
 .todo-list {
     margin-top: 1rem;
-    text-align: left;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 500px;
+    align-items: stretch; 
+    padding: 0; 
 }
 
 /** todo item **/
 .todo-item {
-    font-family: monospace;
     cursor: pointer;
     line-height: 1.5;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+    height: 30px;
+    background-color: #2B2A33;
+    font-size: 16px;
 }
+
+.add-todo-form .textbox__container {
+    width: 490px;
+    height: 50px;
+    margin: 0 auto; 
+    background: #2B2A33;
+    border: 1px dashed #6C6A7C;
+    border-radius: 7px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .add-todo-form .textbox__container input {
+    background: #2B2A33;
+    color: #6C6A7C;
+    border: none;
+    font-size: 0.9rem;
+    width:100%;
+  }
+  
+  .add-todo-form .textbox__container input:focus {
+    outline: none;
+  }
+  
+  .add-todo-form .textbox__container .textbox__button {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #E1A0A0;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+  }
