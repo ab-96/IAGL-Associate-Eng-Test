@@ -8,5 +8,11 @@ let todoList = {
 };
 
 module.exports = {
-  getTodos: () => Promise.resolve(todoList)
+  //fetch all Todos
+  getTodos: () => Promise.resolve(todoList),
+
+  addTodo: (todo) => {
+    todoList.todos.push(todo); // Add the todo to the array
+    return Promise.resolve(todo); // Return the added todo
+  }
 };

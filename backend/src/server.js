@@ -20,12 +20,24 @@ const server = () => {
 
    {
     "todos": [
-      {
+      {s
         "task": "Some API"
       }
     ]
    }
   **/
+ server.post('/api/todo', async (req, res) => {
+  const { task } = req.body;
+
+  if (!task) {
+    return res.status(400).json({ error: "Task is required" });
+  }
+  const newTodo = await todoService.createTodo(task);
+  res.status(201).json(newTodo);
+
+ })
+
+
 
   return server;
 };
